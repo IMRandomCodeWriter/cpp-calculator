@@ -109,6 +109,9 @@ double calculate(std::string expression)
 
         while (historyBack == getHistory().back()){} //waiting for the result by checking the end of the history file
 
+        std::ofstream("calculator.cpp");
+        remove("a.exe");
+
         return getHistory().back();
     }
     else// stupid code part
@@ -177,9 +180,6 @@ int main()
         else
         {
             std::cout << calculate(input) << "\n";
-
-            std::ofstream("calculator.cpp");
-            remove("a.exe");
         }
     }
     return 0;
